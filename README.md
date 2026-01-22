@@ -1,7 +1,9 @@
 🛒 Online Shopping API Service
+
 Bu proje, modern bir e-ticaret sisteminin temel ihtiyaçlarını karşılamak üzere geliştirilmiş, Spring Boot tabanlı bir RESTful API servisidir. Proje kapsamında kullanıcı yönetimi, satıcı ve dükkan ilişkileri, ürün yönetimi ve güvenlik katmanları entegre edilmiştir.
 
 🚀 Kullanılan Teknolojiler
+
 Java 25 & Spring Boot 3.5.x
 
 Spring Data JPA (PostgreSQL veritabanı yönetimi için)
@@ -51,5 +53,7 @@ kendinize göre güncelleyin.
 3. Maven bağımlılıklarını yükleyin:
 
 Bash
+
 mvn clean install
+
 4. Uygulamayı çalıştırın.

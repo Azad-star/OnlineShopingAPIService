@@ -24,18 +24,37 @@ Bu proje, modern bir e-ticaret sisteminin temel ihtiyaçlarını karşılamak ü
 🏗️ Veritabanı Mimarisi
 Sistemde nesneler arasındaki ilişkiler (One-to-Many, Many-to-Many) titizlikle kurgulanmıştır. Temel tablolar şunlardır:
 
-      User / Seller: Kullanıcı ve satıcı rolleri.
+    1. Kullanıcı ve Yetkilendirme (Identity)
+      User: Sisteme giriş yapabilen tüm kullanıcıların (Username, Password, CreateTime) temel          bilgilerini tutan ana tablo.
 
-      Product: Ürün bilgilerinin tutulduğu ana tablo.
+      Customer (Müşteri): Alışveriş yapan son kullanıcıları temsil eder. Her müşteri, kendine          ait bir Basket (Sepet) ile ilişkilendirilmiştir.
 
-      Shop: Satıcıların ürünlerini sergilediği dükkanlar.
+      Seller (Satıcı): Ürün tedarik eden ve dükkan yöneten profesyonel kullanıcılar. Satıcılar,        birden fazla dükkan ile SellerShop üzerinden ilişkilidir.
 
-      ShopProduct: Ürünler ve dükkanlar arasındaki ilişkiyi yöneten ara tablo.
+    2. Dükkan ve Satış Yönetimi
+      Shop (Dükkan): Ürünlerin sergilendiği sanal mağazalar.
 
+      SellerShop: Satıcılar ile dükkanlar arasındaki ilişkiyi yöneten ara tablo. Bir satıcının         birden fazla dükkanı, bir dükkanın ise birden fazla ortağı/satıcısı olabilir.
+
+      ShopProduct: Dükkanlar ve ürünler arasındaki "Many-to-Many" ilişkiyi kuran kritik tablo.         Hangi ürünün hangi dükkanda yer aldığı bilgisini tutar.
+
+    3. Ürün ve Katalog Yönetimi
+      Product (Ürün): Ürün adı, fiyatı, stok durumu ve kategori bilgilerini içeren temel tablo.
+
+      Category (Kategori): Ürünlerin hiyerarşik olarak gruplandırılmasını sağlar.
+
+    4. Sepet ve Sipariş Öncesi Süreç
+     Basket (Sepet): Her müşteriye özel olarak oluşturulan ve alışveriş sürecini yöneten merkez.
+
+     BasketProduct: Sepetler ile ürünler arasındaki ilişkiyi yöneten ara tablo. Müşterinin            sepetine eklediği her bir ürünü takip eder.
 
 
 🔑 Öne Çıkan Özellikler
 
+      Gelişmiş İlişki Yönetimi: JPA ve Hibernate kullanarak kurulan One-to-Many (Kullanıcı-            Sepet) ve Many-to-Many (Sepet-Ürün, Dükkan-Ürün) ilişkileri ile karmaşık veritabanı şeması       yönetimi.
+
+      Transaction Yönetimi: Ürün ekleme ve sepet işlemlerinde veri bütünlüğünü korumak için            @Transactional kullanımı.
+      
       Güvenli Şifreleme: Satıcı şifreleri BCryptPasswordEncoder ile hash'lenerek güvenli bir           şekilde saklanır.
 
       Dinamik Hata Yönetimi: Projeye özel BaseException ve MessageType yapısı ile hata mesajları       yönetilir.

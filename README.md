@@ -15,7 +15,7 @@ Bu proje, modern bir e-ticaret sisteminin temel ihtiyaçlarını karşılamak ü
 
       Maven (Bağımlılık yönetimi)
 
-      SWAGER (Servis ve URL adresleri görüntüleme ve çalıştırma)
+      SWAGER (Servis ve URL adresleri görüntüleme ve çalıştırma) NEW!!!
 
       PostgreSQL (İlişkisel veritabanı)
 
@@ -54,9 +54,7 @@ Sistemde nesneler arasındaki ilişkiler (One-to-Many, Many-to-Many) titizlikle 
 
             git clone https://github.com/Azad-star/OnlineShopingAPIService.git
 
-
       2. src/main/resources/application.properties dosyasındaki PostgreSQL bağlantı bilgilerini
-
        kendinize göre güncelleyin.
 
       3. Maven bağımlılıklarını yükleyin:

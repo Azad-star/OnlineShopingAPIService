@@ -2,6 +2,7 @@
 
 Bu proje, modern bir e-ticaret sisteminin temel ihtiyaçlarını karşılamak üzere geliştirilmiş, Spring Boot tabanlı bir RESTful API servisidir. Proje kapsamında kullanıcı yönetimi, satıcı ve dükkan ilişkileri, ürün yönetimi ve güvenlik katmanları entegre edilmiştir.
 
+
 🚀 Kullanılan Teknolojiler
 
 Java 25 & Spring Boot 3.5.x
@@ -18,6 +19,8 @@ SWAGER (Servis ve URL adresleri görüntüleme ve çalıştırma)
 
 PostgreSQL (İlişkisel veritabanı)
 
+
+
 🏗️ Veritabanı Mimarisi
 Sistemde nesneler arasındaki ilişkiler (One-to-Many, Many-to-Many) titizlikle kurgulanmıştır. Temel tablolar şunlardır:
 
@@ -29,7 +32,10 @@ Shop: Satıcıların ürünlerini sergilediği dükkanlar.
 
 ShopProduct: Ürünler ve dükkanlar arasındaki ilişkiyi yöneten ara tablo.
 
+
+
 🔑 Öne Çıkan Özellikler
+
 Güvenli Şifreleme: Satıcı şifreleri BCryptPasswordEncoder ile hash'lenerek güvenli bir şekilde saklanır.
 
 Dinamik Hata Yönetimi: Projeye özel BaseException ve MessageType yapısı ile hata mesajları yönetilir.
@@ -38,7 +44,10 @@ DTO Tasarım Kalıbı: Entity nesnelerinin doğrudan dış dünyaya açılmasın
 
 Validasyon Kontrolleri: Ürün ekleme işlemlerinde sellerId, shopId ve şifre doğrulaması gibi iş mantığı kontrolleri.
 
+
+
 🛠️ Kurulum ve Çalıştırma
+
 1. Projeyi klonlayın:
 
 Bash

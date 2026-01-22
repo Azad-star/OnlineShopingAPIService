@@ -5,64 +5,64 @@ Bu proje, modern bir e-ticaret sisteminin temel ihtiyaçlarını karşılamak ü
 
 🚀 Kullanılan Teknolojiler
 
-Java 25 & Spring Boot 3.5.x
+      Java 25 & Spring Boot 3.5.x
 
-Spring Data JPA (PostgreSQL veritabanı yönetimi için)
+      Spring Data JPA (PostgreSQL veritabanı yönetimi için)
 
-Spring Security & JWT (Güvenli kimlik doğrulama ve yetkilendirme)
+      Spring Security & JWT (Güvenli kimlik doğrulama ve yetkilendirme)
 
-Lombok (Boilerplate kodları azaltmak için)
+      Lombok (Boilerplate kodları azaltmak için)
 
-Maven (Bağımlılık yönetimi)
+      Maven (Bağımlılık yönetimi)
 
-SWAGER (Servis ve URL adresleri görüntüleme ve çalıştırma)
+      SWAGER (Servis ve URL adresleri görüntüleme ve çalıştırma)
 
-PostgreSQL (İlişkisel veritabanı)
+      PostgreSQL (İlişkisel veritabanı)
 
 
 
 🏗️ Veritabanı Mimarisi
 Sistemde nesneler arasındaki ilişkiler (One-to-Many, Many-to-Many) titizlikle kurgulanmıştır. Temel tablolar şunlardır:
 
-User / Seller: Kullanıcı ve satıcı rolleri.
+      User / Seller: Kullanıcı ve satıcı rolleri.
 
-Product: Ürün bilgilerinin tutulduğu ana tablo.
+      Product: Ürün bilgilerinin tutulduğu ana tablo.
 
-Shop: Satıcıların ürünlerini sergilediği dükkanlar.
+      Shop: Satıcıların ürünlerini sergilediği dükkanlar.
 
-ShopProduct: Ürünler ve dükkanlar arasındaki ilişkiyi yöneten ara tablo.
+      ShopProduct: Ürünler ve dükkanlar arasındaki ilişkiyi yöneten ara tablo.
 
 
 
 🔑 Öne Çıkan Özellikler
 
-Güvenli Şifreleme: Satıcı şifreleri BCryptPasswordEncoder ile hash'lenerek güvenli bir şekilde saklanır.
+      Güvenli Şifreleme: Satıcı şifreleri BCryptPasswordEncoder ile hash'lenerek güvenli bir           şekilde saklanır.
 
-Dinamik Hata Yönetimi: Projeye özel BaseException ve MessageType yapısı ile hata mesajları yönetilir.
+      Dinamik Hata Yönetimi: Projeye özel BaseException ve MessageType yapısı ile hata mesajları       yönetilir.
 
-DTO Tasarım Kalıbı: Entity nesnelerinin doğrudan dış dünyaya açılmasını önlemek için DTO (Data Transfer Object) kullanımı.
+      DTO Tasarım Kalıbı: Entity nesnelerinin doğrudan dış dünyaya açılmasını önlemek için DTO         (Data Transfer Object) kullanımı.
 
-Validasyon Kontrolleri: Ürün ekleme işlemlerinde sellerId, shopId ve şifre doğrulaması gibi iş mantığı kontrolleri.
+      Validasyon Kontrolleri: Ürün ekleme işlemlerinde sellerId, shopId ve şifre doğrulaması           gibi iş mantığı kontrolleri.
 
 
 
 🛠️ Kurulum ve Çalıştırma
 
-1. Projeyi klonlayın:
+      1. Projeyi klonlayın:
 
-      Bash
+            Bash
 
-      git clone https://github.com/Azad-star/OnlineShopingAPIService.git
+            git clone https://github.com/Azad-star/OnlineShopingAPIService.git
 
 
-2. src/main/resources/application.properties dosyasındaki PostgreSQL bağlantı bilgilerini
+      2. src/main/resources/application.properties dosyasındaki PostgreSQL bağlantı bilgilerini
 
-      kendinize göre güncelleyin.
+       kendinize göre güncelleyin.
 
-3. Maven bağımlılıklarını yükleyin:
+      3. Maven bağımlılıklarını yükleyin:
 
-      Bash
+            Bash
 
-      mvn clean install
+            mvn clean install
 
-4. Uygulamayı çalıştırın.
+      4. Uygulamayı çalıştırın.

@@ -51,7 +51,5 @@ kendinize göre güncelleyin.
 3. Maven bağımlılıklarını yükleyin:
 
 Bash
-
 mvn clean install
-
 4. Uygulamayı çalıştırın.

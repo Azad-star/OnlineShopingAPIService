@@ -37,14 +37,21 @@ DTO Tasarım Kalıbı: Entity nesnelerinin doğrudan dış dünyaya açılmasın
 Validasyon Kontrolleri: Ürün ekleme işlemlerinde sellerId, shopId ve şifre doğrulaması gibi iş mantığı kontrolleri.
 
 🛠️ Kurulum ve Çalıştırma
-Projeyi klonlayın:
+1. Projeyi klonlayın:
 
 Bash
+
 git clone https://github.com/Azad-star/OnlineShopingAPIService.git
-src/main/resources/application.properties dosyasındaki PostgreSQL bağlantı bilgilerini kendinize göre güncelleyin.
 
-Maven bağımlılıklarını yükleyin:
+
+2. src/main/resources/application.properties dosyasındaki PostgreSQL bağlantı bilgilerini
+
+kendinize göre güncelleyin.
+
+3. Maven bağımlılıklarını yükleyin:
 
 Bash
+
 mvn clean install
-Uygulamayı çalıştırın.
+
+4. Uygulamayı çalıştırın.

@@ -50,19 +50,19 @@ Validasyon Kontrolleri: Ürün ekleme işlemlerinde sellerId, shopId ve şifre d
 
 1. Projeyi klonlayın:
 
-Bash
+      Bash
 
-git clone https://github.com/Azad-star/OnlineShopingAPIService.git
+      git clone https://github.com/Azad-star/OnlineShopingAPIService.git
 
 
 2. src/main/resources/application.properties dosyasındaki PostgreSQL bağlantı bilgilerini
 
-kendinize göre güncelleyin.
+      kendinize göre güncelleyin.
 
 3. Maven bağımlılıklarını yükleyin:
 
-Bash
+      Bash
 
-mvn clean install
+      mvn clean install
 
 4. Uygulamayı çalıştırın.
